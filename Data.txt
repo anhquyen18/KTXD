@@ -10,7 +10,7 @@ I.Nhóm thông số về vốn đầu tư:
 II. Nhóm thông số về chi phí vốn:
 1. Chi phí cơ hội vốn tự có		%năm	9.0	%
 2. Lãi suất vay vốn dài hạn		%năm	10.1	%
-3. Lãi suất vay vốn ngắn hạn		%năm
+3. Lãi suất vay vốn ngắn hạn		%năm	0
 
 III. Nhóm thông số về chi phí:
 1. Chi phí chung

@@ -44,7 +44,6 @@ public class Main extends Application {
 		
 		alert.setTitle("Thoát");
 		alert.setHeaderText("Bạn có thực sự muốn thoát?");
-//		alert.setContentText("Mày có muốn lưu trước khi đăng xuất không");
 		if (alert.showAndWait().get() == ButtonType.OK) {
 			stage.close();
 		}

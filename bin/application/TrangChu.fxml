@@ -15,30 +15,20 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="713.0" prefWidth="1014.0" style="-fx-background-color: #beeef3;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
    <children>
-      <TextField fx:id="FilePathTF" layoutX="474.0" layoutY="576.0" prefHeight="26.0" prefWidth="316.0" />
-      <Button layoutX="430.0" layoutY="613.0" mnemonicParsing="false" onAction="#XuatDuLieu" text="Xuất dữ liệu">
+      <TextField fx:id="FileInputTF" layoutX="485.0" layoutY="535.0" prefHeight="26.0" prefWidth="306.0" />
+      <Button layoutX="412.0" layoutY="612.0" mnemonicParsing="false" onAction="#XuatDuLieu" text="Xuất dữ liệu">
          <font>
             <Font size="19.0" />
          </font>
       </Button>
-      <Label alignment="CENTER" layoutX="107.0" layoutY="626.0" prefHeight="47.0" prefWidth="182.0" text="VỐN ĐẦU TƯ" textFill="#0f17f4b0">
+      <Label alignment="CENTER" layoutX="107.0" layoutY="14.0" prefHeight="47.0" prefWidth="182.0" text="VỐN ĐẦU TƯ" textFill="#0f17f4b0">
          <font>
             <Font name="System Bold" size="20.0" />
          </font>
       </Label>
-      <Label layoutX="147.0" layoutY="673.0" text="Sắp cập nhật...">
-         <font>
-            <Font size="16.0" />
-         </font>
-      </Label>
-      <Label alignment="CENTER" layoutX="121.0" layoutY="566.0" prefHeight="47.0" prefWidth="154.0" text="CHI PHÍ VỐN" textFill="#0f17f4b0">
+      <Label alignment="CENTER" layoutX="125.0" layoutY="277.0" prefHeight="47.0" prefWidth="154.0" text="CHI PHÍ VỐN" textFill="#0f17f4b0">
          <font>
             <Font name="System Bold" size="20.0" />
-         </font>
-      </Label>
-      <Label layoutX="147.0" layoutY="600.0" text="Sắp cập nhật...">
-         <font>
-            <Font size="16.0" />
          </font>
       </Label>
       <Label alignment="CENTER" layoutX="430.0" layoutY="13.0" prefHeight="47.0" prefWidth="332.0" text="CHI PHÍ" textFill="#0f17f4b0">
@@ -46,7 +36,7 @@
             <Font name="System Bold" size="20.0" />
          </font>
       </Label>
-      <GridPane layoutX="397.0" layoutY="55.0" prefHeight="443.0" prefWidth="398.0">
+      <GridPane layoutX="397.0" layoutY="55.0" prefHeight="449.0" prefWidth="398.0">
          <columnConstraints>
             <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="203.40003204345703" minWidth="10.0" prefWidth="38.399992370605474" />
             <ColumnConstraints hgrow="SOMETIMES" maxWidth="238.40000762939454" minWidth="10.0" prefWidth="191.4000244140625" />
@@ -204,12 +194,12 @@
             </TextField>
          </children>
       </GridPane>
-      <Label alignment="CENTER" layoutX="113.0" layoutY="13.0" prefHeight="47.0" prefWidth="170.0" text="DOANH THU" textFill="#0f17f4b0">
+      <Label alignment="CENTER" layoutX="113.0" layoutY="426.0" prefHeight="47.0" prefWidth="170.0" text="DOANH THU" textFill="#0f17f4b0">
          <font>
             <Font name="System Bold" size="20.0" />
          </font>
       </Label>
-      <GridPane layoutX="9.0" layoutY="37.0" prefHeight="495.0" prefWidth="378.0">
+      <GridPane layoutX="9.0" layoutY="474.0" prefHeight="230.0" prefWidth="378.0">
          <columnConstraints>
             <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="203.40003204345703" minWidth="10.0" prefWidth="38.399992370605474" />
             <ColumnConstraints hgrow="SOMETIMES" maxWidth="238.40000762939454" minWidth="10.0" prefWidth="199.8" />
@@ -217,14 +207,14 @@
             <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="153.60001220703123" minWidth="10.0" prefWidth="108.20001220703125" />
          </columnConstraints>
          <rowConstraints>
-            <RowConstraints maxHeight="194.60001220703126" minHeight="10.0" prefHeight="73.19999694824219" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="184.6" minHeight="10.0" prefHeight="73.20000305175782" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="98.99999389648437" minHeight="0.0" prefHeight="43.99999389648437" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="91.19997558593752" minHeight="10.0" prefHeight="39.199987792968756" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="151.19998779296878" minHeight="10.0" prefHeight="67.99997558593748" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="96.80002441406248" minHeight="10.0" prefHeight="51.19997558593752" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="67.20002441406251" minHeight="10.0" prefHeight="43.99997558593748" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="63.20003662109377" minHeight="10.0" prefHeight="50.4000244140625" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="194.60001220703126" minHeight="10.0" prefHeight="29.99999389648437" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="184.6" minHeight="10.0" prefHeight="24.600006103515632" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="98.99999389648437" minHeight="0.0" prefHeight="34.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="91.19997558593752" minHeight="10.0" prefHeight="32.600006103515625" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="151.19998779296878" minHeight="10.0" prefHeight="26.999987792968753" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="118.79999084472655" minHeight="10.0" prefHeight="33.59998779296873" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="133.1999969482422" minHeight="10.0" prefHeight="24.80000000000001" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="154.19998474121093" minHeight="10.0" prefHeight="42.400000000000006" vgrow="SOMETIMES" />
          </rowConstraints>
          <children>
             <TextField fx:id="SoLuongPhongTF" alignment="CENTER" GridPane.columnIndex="2">
@@ -313,21 +303,21 @@
          </children>
       </GridPane>
       <Line endX="-109.89996337890625" endY="678.5" layoutX="507.0" layoutY="37.0" startX="-109.89996337890625" startY="-37.0" stroke="#10339c" />
-      <Line endX="-526.5999755859375" endY="518.6000366210938" layoutX="517.0" layoutY="47.0" startX="289.2000732421875" startY="518.6000366210938" stroke="#10339c" />
+      <Line endX="-120.39996337890625" endY="518.6000366210938" layoutX="519.0" layoutY="8.0" startX="289.2000732421875" startY="518.6000366210938" stroke="#10339c" />
       <Line endX="-239.29986572265625" endY="659.0" layoutX="1046.0" layoutY="56.0" startX="-239.2999267578125" startY="-56.0" stroke="#10339c" />
       <Line endX="-517.0" endY="670.0999755859375" layoutX="517.0" layoutY="47.0" startX="-119.39996337890625" startY="669.2999877929688" />
       <Line endX="-517.7070922851562" endY="669.699951171875" layoutX="517.0" layoutY="47.0" startX="-517.0" startY="-47.0" />
-      <Label layoutX="415.0" layoutY="574.0" text="File:">
+      <Label layoutX="416.0" layoutY="533.0" text="Input:">
          <font>
             <Font size="20.0" />
          </font>
       </Label>
-      <Button layoutX="622.0" layoutY="613.0" mnemonicParsing="false" onAction="#XoaDuLieu" prefHeight="41.0" prefWidth="131.0" text="Xóa dữ liệu">
+      <Button layoutX="547.0" layoutY="611.0" mnemonicParsing="false" onAction="#XoaDuLieu" prefHeight="41.0" prefWidth="131.0" text="Xóa dữ liệu">
          <font>
             <Font size="19.0" />
          </font>
       </Button>
-      <Button layoutX="430.0" layoutY="665.0" mnemonicParsing="false" onAction="#TinhToan" prefHeight="41.0" prefWidth="126.0" text="Tính toán">
+      <Button layoutX="413.0" layoutY="664.0" mnemonicParsing="false" onAction="#TinhToan" prefHeight="41.0" prefWidth="126.0" text="Tính toán">
          <font>
             <Font size="19.0" />
          </font>
@@ -347,11 +337,244 @@
             <Font name="System Bold" size="17.0" />
          </font>
       </Label>
-      <Button layoutX="623.0" layoutY="665.0" mnemonicParsing="false" onAction="#KetQua" text="Xem kết quả">
+      <Button layoutX="547.0" layoutY="664.0" mnemonicParsing="false" onAction="#KetQua" text="Xem kết quả">
          <font>
             <Font size="19.0" />
          </font>
       </Button>
       <Label layoutX="843.0" layoutY="698.0" prefHeight="1.0" prefWidth="136.0" text="Trần Anh Quyền 18THXD" />
+      <GridPane layoutX="9.0" layoutY="54.0" prefHeight="218.0" prefWidth="386.0">
+        <columnConstraints>
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="52.20001220703125" minWidth="10.0" prefWidth="24.000006103515624" />
+          <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="168.0" minWidth="10.0" prefWidth="155.00000610351563" />
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="85.0" minWidth="0.0" prefWidth="47.79999389648438" />
+            <ColumnConstraints fillWidth="false" halignment="CENTER" hgrow="SOMETIMES" maxWidth="82.40003967285153" minWidth="0.0" prefWidth="51.80001220703127" />
+            <ColumnConstraints fillWidth="false" halignment="CENTER" hgrow="SOMETIMES" maxWidth="85.1999816894531" minWidth="7.5999603271484375" prefWidth="50.39998779296877" />
+            <ColumnConstraints fillWidth="false" halignment="CENTER" hgrow="SOMETIMES" maxWidth="93.20001220703125" minWidth="10.0" prefWidth="58.40001220703124" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="51.99999084472656" minHeight="10.0" prefHeight="33.4" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="47.99999084472656" minHeight="8.800009155273436" prefHeight="27.599996948242186" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="58.80000915527344" minHeight="10.0" prefHeight="31.000006103515624" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="64.20001831054687" minHeight="10.0" prefHeight="35.79998779296875" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="64.20001831054688" minHeight="7.400006103515636" prefHeight="26.200024414062497" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="85.79999389648438" minHeight="6.399993896484375" prefHeight="31.00000610351563" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="66.39998474121094" minHeight="10.0" prefHeight="29.399993896484375" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="1" GridPane.rowIndex="1">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label text="Tổng vốn đầu tư cố định" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" text="Đơn vị" textAlignment="CENTER" wrapText="true" GridPane.columnIndex="2">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label prefHeight="62.0" prefWidth="52.0" text="Chưa VAT" textAlignment="CENTER" wrapText="true" GridPane.columnIndex="3">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label text="Thuế VAT" textAlignment="CENTER" wrapText="true" GridPane.columnIndex="4">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label text="Có VAT" textAlignment="CENTER" wrapText="true" GridPane.columnIndex="5">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="18.0" prefWidth="42.0" text="tr đồng" textAlignment="CENTER" wrapText="true" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <TextField fx:id="VDTChuaVATTF" alignment="CENTER" prefHeight="26.0" prefWidth="47.0" GridPane.columnIndex="3" GridPane.rowIndex="1">
+               <font>
+                  <Font name="System Italic" size="12.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="VDTThueVATTF" alignment="CENTER" prefHeight="26.0" prefWidth="45.0" GridPane.columnIndex="4" GridPane.rowIndex="1">
+               <font>
+                  <Font name="System Italic" size="12.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="VDTCoVATTF" prefHeight="26.0" prefWidth="51.0" GridPane.columnIndex="5" GridPane.rowIndex="1">
+               <font>
+                  <Font name="System Italic" size="12.0" />
+               </font>
+            </TextField>
+            <Label text="Chi phí xây dựng khách sạn" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Label text="tr đồng" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <TextField fx:id="CPXDChuaVATTF" alignment="CENTER" prefHeight="26.0" prefWidth="63.0" GridPane.columnIndex="3" GridPane.rowIndex="2">
+               <font>
+                  <Font name="System Italic" size="12.0" />
+               </font>
+            </TextField>
+            <Label text="2" GridPane.rowIndex="3">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label prefHeight="34.0" prefWidth="156.0" text=" Nguồn vốn huy động đầu tư cố định" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="18.0" prefWidth="42.0" text="tr đồng" textAlignment="CENTER" wrapText="true" GridPane.columnIndex="2" GridPane.rowIndex="3">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <TextField fx:id="VDTCoDinhTF" alignment="CENTER" prefHeight="26.0" prefWidth="63.0" GridPane.columnIndex="3" GridPane.rowIndex="3">
+               <font>
+                  <Font name="System Italic" size="12.0" />
+               </font>
+            </TextField>
+            <Label alignment="CENTER" prefHeight="34.0" prefWidth="46.0" text="Tỉ lệ (%)" textAlignment="CENTER" wrapText="true" GridPane.columnIndex="4" GridPane.rowIndex="3">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label prefHeight="18.0" prefWidth="116.0" text="- Vốn tự có" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <Label prefHeight="18.0" prefWidth="116.0" text="- Vốn vay NHCT" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <Label text="3" GridPane.rowIndex="6">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label text="Thời gian vay vốn" GridPane.columnIndex="1" GridPane.rowIndex="6">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label text="năm" GridPane.columnIndex="2" GridPane.rowIndex="6">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label text="tr đồng" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+            <Label text="tr đồng" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+            <TextField fx:id="VonTuCoTF" alignment="CENTER" prefHeight="26.0" prefWidth="63.0" GridPane.columnIndex="3" GridPane.rowIndex="4">
+               <font>
+                  <Font name="System Italic" size="12.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="VonVayTF" alignment="CENTER" prefHeight="26.0" prefWidth="63.0" GridPane.columnIndex="3" GridPane.rowIndex="5">
+               <font>
+                  <Font name="System Italic" size="12.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="VonTuCoTyLeTF" alignment="CENTER" prefHeight="26.0" prefWidth="45.0" GridPane.columnIndex="4" GridPane.rowIndex="4">
+               <font>
+                  <Font name="System Italic" size="12.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="VonVayTyLeTF" alignment="CENTER" prefHeight="26.0" prefWidth="45.0" GridPane.columnIndex="4" GridPane.rowIndex="5">
+               <font>
+                  <Font name="System Italic" size="12.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="ThoiGianVayVonTF" alignment="CENTER" prefHeight="26.0" prefWidth="76.0" GridPane.columnIndex="3" GridPane.rowIndex="6">
+               <font>
+                  <Font name="System Italic" size="12.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="CPXDThueVATTF" alignment="CENTER" prefHeight="26.0" prefWidth="45.0" GridPane.columnIndex="4" GridPane.rowIndex="2">
+               <font>
+                  <Font name="System Italic" size="12.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="CPXDCoVATTF" prefHeight="26.0" prefWidth="51.0" GridPane.columnIndex="5" GridPane.rowIndex="2">
+               <font>
+                  <Font name="System Italic" size="12.0" />
+               </font>
+            </TextField>
+         </children>
+      </GridPane>
+      <GridPane layoutX="14.0" layoutY="324.0" prefHeight="91.0" prefWidth="378.0">
+        <columnConstraints>
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="90.20001220703125" minWidth="10.0" prefWidth="33.400028228759766" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="176.1999938964844" minWidth="10.0" prefWidth="173.60001220703126" />
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="118.80000610351564" minWidth="10.0" prefWidth="56.800027465820335" />
+            <ColumnConstraints fillWidth="false" halignment="CENTER" hgrow="SOMETIMES" maxWidth="159.8000030517578" minWidth="10.0" prefWidth="115.99997253417962" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="1">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label text="Chi phí cơ hội vốn tự có" GridPane.columnIndex="1">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label text="2" GridPane.rowIndex="1">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label text="Lãi suất vay vốn dài hạn" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label text="3" GridPane.rowIndex="2">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label text="Lãi suất vay vốn ngắn hạn hạn" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label text="\%/năm" GridPane.columnIndex="2" />
+            <Label text="\%/năm" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <Label text="\%/năm" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <TextField fx:id="CPVonTuCoTF" alignment="CENTER" prefHeight="26.0" prefWidth="51.0" GridPane.columnIndex="3">
+               <font>
+                  <Font name="System Italic" size="12.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="LaiSuatDaiHanTF" alignment="CENTER" prefHeight="26.0" prefWidth="50.0" GridPane.columnIndex="3" GridPane.rowIndex="1">
+               <font>
+                  <Font name="System Italic" size="12.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="LaiSuatNganHanTF" alignment="CENTER" prefHeight="26.0" prefWidth="50.0" GridPane.columnIndex="3" GridPane.rowIndex="2">
+               <font>
+                  <Font name="System Italic" size="12.0" />
+               </font>
+            </TextField>
+         </children>
+      </GridPane>
+      <Line endX="-131.41419982910156" endY="518.6000366210938" layoutX="130.0" layoutY="-85.0" startX="267.39996337890625" startY="518.6000366210938" stroke="#10339c" />
+      <Line endX="-131.41419982910156" endY="518.6000366210938" layoutX="130.0" layoutY="-234.0" startX="266.60003662109375" startY="518.6000366210938" stroke="#10339c" />
+      <Label layoutX="408.0" layoutY="561.0" text="Output:">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="FileOutputTF" layoutX="485.0" layoutY="563.0" prefHeight="26.0" prefWidth="306.0" />
+      <Button layoutX="695.0" layoutY="615.0" mnemonicParsing="false" onAction="#XuatKetQua" prefHeight="75.0" prefWidth="95.0" text="Xuất file kết quả" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>

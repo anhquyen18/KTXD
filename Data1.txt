@@ -1,0 +1,43 @@
+I.Nhóm thông số về vốn đầu tư:
+					Đơn vị	Chưa VAT	Thuế VAT	Có VAT
+1. Tổng vốn đầu tư cố định: 		tr đồng	45000		5000		50000
+   Chi phí xây dựng khách sạn:		tr đồng	45000		5000		50000
+2. Nguồn vốn huy động đầu tư cố định:	đồng	50000		Tỷ lệ(%)
+   - Vốn tự có				đồng	35000		70.00	
+   - Vốn vay NCHT			đồng	15000		30.00	
+3. Thời gian vay vốn:			năm	7
+
+II. Nhóm thông số về chi phí vốn:
+1. Chi phí cơ hội vốn tự có		%năm	4.5	%
+2. Lãi suất vay vốn dài hạn		%năm	7.0	%
+3. Lãi suất vay vốn ngắn hạn		%năm	0
+
+III. Nhóm thông số về chi phí:
+1. Chi phí chung
+   - Tiền lương				LươngBQ	8	tr đồng/tháng
+   					Số LĐ	20	Người
+   - Tăng lương hằng năm		%năm	3	%Lương
+   - BHXH + BHYT + BHTN... theo			24	%Lương
+   quy định...
+   - Chi phí đào tạo nhân viên			4	%Doanh Thu
+   - Chi phí điện, nước, viễn thông...		4	%Doanh Thu
+   - Chi phí quảng cáo, tiếp thị		5	%Doanh thu 5 năm đầu
+   - Chi phí sửa chữa thường xuyên		3	%Doanh Thu
+   - Chi phí thuê đất				0	tr/tháng
+   - Chi phí quản lý doanh nghiệp		10	%Doanh Thu
+2. Hoạt động khách sạn
+   - Chi phí phòng ngủ				10	%Doanh Thu
+3. Chi phí nhà hàng+Spa, bar...			30	%Doanh thu nhà hàng
+4. Chế độ khấu hao
+   - Công trình khách sạn		năm	25
+
+IV. Nhóm thông số về chi phí doanh thu
+1. Số lượng phòng				60
+2. Đơn giá(chưa bao gồm VAT)
+   - Giá phòng bình quân			1.2	tr/tháng
+   - Tốc độ tăng giá				2	%năm
+3. Doanh thu nhà hàng				20	%Doanh thu phòng
+4. Công suất hoạt động				50	%năm đầu
+						60	%5 năm sau
+						80	%các năm còn lại
+5. Doanh thu Massage + Spa			10	%Doanh thu phòng

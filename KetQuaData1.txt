@@ -1,0 +1,18 @@
+Năm	Doanh Thu	Chi Phí
+1	17082.0	9318.72
+2	20908.37	10944.24
+3	21326.54	11187.65
+4	21753.07	11436.66
+5	22188.13	11691.4
+6	22631.89	10820.43
+7	30779.37	13804.99
+Đơn vị: triệu đồng
+---------------------------------------
+Chỉ số thu chi quy về thời điểm hiện tại NPV:	12154.47	triệu đồng
+
+Chỉ tiêu mức lãi suất nội tại IRR:	11.0058%
+
+Chỉ tiêu chỉ số lợi ích và chi phí BCR:	1.2126
+
+Thời gian thu hồi vốn dự kiến:	5 năm 2 tháng
+

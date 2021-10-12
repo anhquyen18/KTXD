@@ -10,6 +10,7 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
@@ -32,7 +33,8 @@ public class Controller {
 	public double SoLuongPhong, GiaPhong, TDTangGia, DTNhaHang, DTMassage, CS1Nam, CS5NamSau, CSConLai;
 	int SoNgay = 365;
 	@FXML
-	private TextField SoLuongPhongTF, GiaPhongTF, TDTangGiaTF, DTNhaHangTF, DTMassageTF, CS1NamTF, CS5NamSauTF, CSConLaiTF;
+	private TextField SoLuongPhongTF, GiaPhongTF, TDTangGiaTF, DTNhaHangTF, DTMassageTF, CS1NamTF, CS5NamSauTF,
+			CSConLaiTF;
 
 	// BIẾN DOANH THU VÀ CHI PHÍ CHO NHIỀU NĂM
 	double[] DoanhThu;
@@ -51,23 +53,23 @@ public class Controller {
 	@FXML
 	private TextField CPVonTuCoTF, LaiSuatDaiHanTF, LaiSuatNganHanTF, LaiSuatTinhToanTF;
 
-	// Table View
+	// BIẾN KẾT QUẢ
 	@FXML
 	private TextField FileInputTF, FileOutputTF;
-
 	@FXML
 	private TableView<DoanhThuVaChiPhi> table;
-
 	@FXML
 	private TableColumn<DoanhThuVaChiPhi, Integer> NamColumn;
-
 	@FXML
 	private TableColumn<DoanhThuVaChiPhi, Double> DoanhThuColumn;
-
 	@FXML
 	private TableColumn<DoanhThuVaChiPhi, Double> ChiPhiColumn;
-
 	private ObservableList<DoanhThuVaChiPhi> DoanhThuVaChiPhiList;
+	@FXML
+	private Label NPVLb, IRRLb, BCRLb, ThoiGianDuKienLb;
+	public String ThoiGianDuKien = "";
+	public double NPV, BCR, IRR;
+	
 
 	public void XuatDuLieu(ActionEvent event) throws IOException {
 		FileInput = FileInputTF.getText();
@@ -184,7 +186,7 @@ public class Controller {
 		CS1NamTF.setText("");
 		CS5NamSauTF.setText("");
 		CSConLaiTF.setText("");
-		
+
 		VDTChuaVATTF.setText("");
 		VDTThueVATTF.setText("");
 		VDTCoVATTF.setText("");
@@ -197,25 +199,24 @@ public class Controller {
 		VonVayTF.setText("");
 		VonVayTyLeTF.setText("");
 		ThoiGianVayVonTF.setText("");
-		
+
 		CPVonTuCoTF.setText("");
 		LaiSuatDaiHanTF.setText("");
 		LaiSuatNganHanTF.setText("");
 
-
 	}
 
 	public void TinhToan(ActionEvent event) {
-		
+
 		// CHI PHÍ VỐN
 		VDTCoVAT = Double.parseDouble(VDTCoVATTF.getText());
 		VonTuCo = Double.parseDouble(VonTuCoTF.getText());
 		VonVay = Double.parseDouble(VonVayTF.getText());
-		CPVonTuCo = Double.parseDouble(CPVonTuCoTF.getText())*0.01;
-		LaiSuatDaiHan = Double.parseDouble(LaiSuatDaiHanTF.getText())*0.01;
-		
-		double LaiSuatTinhToan = (VonTuCo*CPVonTuCo+VonVay*LaiSuatDaiHan)/VDTCoVAT;
-		LaiSuatTinhToanTF.setText(Double.toString(LaiSuatTinhToan*100));
+		CPVonTuCo = Double.parseDouble(CPVonTuCoTF.getText()) * 0.01;
+		LaiSuatDaiHan = Double.parseDouble(LaiSuatDaiHanTF.getText()) * 0.01;
+
+		double LaiSuatTinhToan = (VonTuCo * CPVonTuCo + VonVay * LaiSuatDaiHan) / VDTCoVAT;
+		LaiSuatTinhToanTF.setText(Double.toString(LaiSuatTinhToan * 100));
 
 		// DOANH THU
 		SoLuongPhong = Integer.parseInt(SoLuongPhongTF.getText());
@@ -229,7 +230,7 @@ public class Controller {
 		DTNhaHang = Double.parseDouble(DTNhaHangTF.getText()) * 0.01;
 		DTMassage = Double.parseDouble(DTMassageTF.getText()) * 0.01;
 		double DoanhThuKhac = DTNhaHang + DTMassage;
-		
+
 		// CHI PHÍ
 		CPDaoTao = Double.parseDouble(DaoTaoTF.getText()) * 0.01;
 		CPSinhHoat = Double.parseDouble(SinhHoatTF.getText()) * 0.01;
@@ -244,93 +245,128 @@ public class Controller {
 		CPThueDat = Double.parseDouble(ThueDatTF.getText());
 		CPDichVuKhac = Double.parseDouble(DichVuKhacTF.getText()) * 0.01;
 		double CPKhac = CPDaoTao + CPSinhHoat + CPQuangCao + CPSuaChua + CPQuanLy + CPPhongNgu;
-		
-		double DoanhThuPhong = GiaPhong*SoNgay*SoLuongPhong;
-		
+
+		double DoanhThuPhong = GiaPhong * SoNgay * SoLuongPhong;
+
 		// TÍNH TỔNG DOANH THU VÀ CHI PHÍ THEO THỜI GIAN VAY VỐN
 		DoanhThu = new double[ThoiGianVayVon];
 		ChiPhi = new double[ThoiGianVayVon];
 		for (int i = 0; i < DoanhThu.length; i++) {
 			if (i == 0) {
-				DoanhThu[i] = (1+ DoanhThuKhac)* DoanhThuPhong * CS1Nam;
-				
-				ChiPhi[i] = DoanhThu[i] * CPKhac + Luong1NV * SoLuongNV * 12 *(1+ CPBaoHiem)
-						+ CPThueDat * 12 + CPDichVuKhac * (DoanhThuKhac-DTMassage) * DoanhThuPhong*CS1Nam;
+				DoanhThu[i] = (1 + DoanhThuKhac) * DoanhThuPhong * CS1Nam;
+
+				ChiPhi[i] = DoanhThu[i] * CPKhac + Luong1NV * SoLuongNV * 12 * (1 + CPBaoHiem) + CPThueDat * 12
+						+ CPDichVuKhac * (DoanhThuKhac - DTMassage) * DoanhThuPhong * CS1Nam;
 			} else if (i >= 1 && i <= 5) {
-				if ( i < 5) {
+				if (i < 5) {
 					DoanhThuPhong += DoanhThuPhong * TDTangGia;
-					DoanhThu[i] = (1+ DoanhThuKhac)* DoanhThuPhong * CS5NamSau;
+					DoanhThu[i] = (1 + DoanhThuKhac) * DoanhThuPhong * CS5NamSau;
 					Luong1NV += Luong1NV * TangLuong;
-					
-					ChiPhi[i] = DoanhThu[i] * CPKhac + Luong1NV * SoLuongNV * 12 *(1+ CPBaoHiem)
-							+ CPThueDat * 12 + CPDichVuKhac * (DoanhThuKhac-DTMassage) * DoanhThuPhong*CS5NamSau;
-				}else {
+
+					ChiPhi[i] = DoanhThu[i] * CPKhac + Luong1NV * SoLuongNV * 12 * (1 + CPBaoHiem) + CPThueDat * 12
+							+ CPDichVuKhac * (DoanhThuKhac - DTMassage) * DoanhThuPhong * CS5NamSau;
+				} else {
 					DoanhThuPhong += DoanhThuPhong * TDTangGia;
-					DoanhThu[i] = (1+ DoanhThuKhac)* DoanhThuPhong * CS5NamSau;
-					
+					DoanhThu[i] = (1 + DoanhThuKhac) * DoanhThuPhong * CS5NamSau;
+
 					Luong1NV += Luong1NV * TangLuong;
-					ChiPhi[i] = DoanhThu[i] * (CPKhac - CPQuangCao) + Luong1NV * SoLuongNV * 12
-							*(1+ CPBaoHiem) + CPThueDat * 12
-							+ CPDichVuKhac * (DoanhThuKhac-DTMassage) * DoanhThuPhong*CS5NamSau;
-				}				
+					ChiPhi[i] = DoanhThu[i] * (CPKhac - CPQuangCao) + Luong1NV * SoLuongNV * 12 * (1 + CPBaoHiem)
+							+ CPThueDat * 12 + CPDichVuKhac * (DoanhThuKhac - DTMassage) * DoanhThuPhong * CS5NamSau;
+				}
 			} else if (i > 5) {
 				DoanhThuPhong += DoanhThuPhong * TDTangGia;
-				DoanhThu[i] = (1+ DoanhThuKhac)* DoanhThuPhong  * CSConLai;
-				
+				DoanhThu[i] = (1 + DoanhThuKhac) * DoanhThuPhong * CSConLai;
+
 				Luong1NV += Luong1NV * TangLuong;
-				ChiPhi[i] = DoanhThu[i] * (CPKhac - CPQuangCao) + Luong1NV * SoLuongNV * 12
-						*(1+ CPBaoHiem) + CPThueDat * 12
-						+ CPDichVuKhac *(DoanhThuKhac-DTMassage) * DoanhThuPhong*CSConLai;
+				ChiPhi[i] = DoanhThu[i] * (CPKhac - CPQuangCao) + Luong1NV * SoLuongNV * 12 * (1 + CPBaoHiem)
+						+ CPThueDat * 12 + CPDichVuKhac * (DoanhThuKhac - DTMassage) * DoanhThuPhong * CSConLai;
 			}
 		}
-		
+
 		// TÍNH NPV
-//		double TongChietKhau = 0;
-//		for (int i = 0; i < DoanhThu.length; i++) {
-//			TongChietKhau += (DoanhThu[i]-ChiPhi[i])/Math.pow(1+ LaiSuatTinhToan,i+1);
-//		}
-//		double NPV = TongChietKhau - VDTCoVAT;
-		
+		double TongChietKhau = 0;
+		for (int i = 0; i < DoanhThu.length; i++) {
+			TongChietKhau += (DoanhThu[i] - ChiPhi[i]) / Math.pow(1 + LaiSuatTinhToan, i + 1);
+		}
+		NPV = TongChietKhau - VDTCoVAT;
+
 		// TÍNH IRR
-		double IRR = 0.0;
-		double TongChietKhau = 0.0;
+		double newTongChietKhau = 0.0;
 		double newNPV = 0.0;
-		double rate = LaiSuatTinhToan;
-		double rateGod = 0.0;
-		for (int i = 0; i < 10; i++) {
-			TongChietKhau = 0.0;
+		double firstRate = 0.001;
+		double secondRate = 0.0;
+		double thirdRate = 0.0;
+		for (int i = 0; i < 100; i++) {
+			newTongChietKhau = 0.0;
 			for (int j = 0; j < DoanhThu.length; j++) {
-					TongChietKhau += (DoanhThu[j]-ChiPhi[j])/Math.pow(1+ LaiSuatTinhToan+((double)i/100),j+1);
+				newTongChietKhau += (DoanhThu[j] - ChiPhi[j]) / Math.pow(1 + firstRate + ((double) i / 100), j + 1);
 			}
-			rate = LaiSuatTinhToan+ (double)i/100;
-			newNPV = TongChietKhau - VDTCoVAT;	
+			secondRate = firstRate + (double) i / 100;
+			newNPV = newTongChietKhau - VDTCoVAT;
 			if (newNPV < 0) {
 				for (int h = 1; h < 1000; h++) {
-					TongChietKhau = 0.0;
+					newTongChietKhau = 0.0;
 					for (int j = 0; j < DoanhThu.length; j++) {
-							TongChietKhau += (DoanhThu[j]-ChiPhi[j])/Math.pow(1+ rate-((double)h/100000),j+1);
+						newTongChietKhau += (DoanhThu[j] - ChiPhi[j])
+								/ Math.pow(1 + secondRate - ((double) h / 100000), j + 1);
 					}
-					newNPV = TongChietKhau - VDTCoVAT;
-					rateGod = rate - (double)h/100000;	
-					if (newNPV>-1.5) {
-						for (int l =1; l < 1000; l++) {
-							TongChietKhau = 0.0;
+					newNPV = newTongChietKhau - VDTCoVAT;
+					thirdRate = secondRate - (double) h / 100000;
+					if (newNPV > -1.5) {
+						for (int l = 1; l < 10000; l++) {
+							newTongChietKhau = 0.0;
 							for (int j = 0; j < DoanhThu.length; j++) {
-								TongChietKhau += (DoanhThu[j]-ChiPhi[j])/Math.pow(1+ rateGod-((double)l/1000000),j+1);
+								newTongChietKhau += (DoanhThu[j] - ChiPhi[j])
+										/ Math.pow(1 + thirdRate - ((double) l / 1000000), j + 1);
 							}
-							newNPV = TongChietKhau - VDTCoVAT;
-							IRR=rateGod-((double)l/1000000);
-							if(newNPV > -0.2) {
+							newNPV = newTongChietKhau - VDTCoVAT;
+							IRR = thirdRate - ((double) l / 1000000);
+							if (newNPV > -0.2) {
 								break;
 							}
 						}
 						break;
-					}	
+					}
 				}
 				break;
 			}
 		}
-		System.out.println(Math.round(IRR*1000000.0)/1000000.0);
+//		System.out.println(Math.round(IRR * 1000000.0) / 1000000.0);
+
+		// TÍNH BCR
+		double TongDoanhThu = 0.0;
+		double TongChiPhi = 0.0;
+		for (int i = 0; i < DoanhThu.length; i++) {
+			TongDoanhThu += DoanhThu[i];
+			TongChiPhi += ChiPhi[i];
+		}
+		BCR = TongDoanhThu / (TongChiPhi + VDTCoVAT);
+
+		// TÍNH THỜI GIAN THU HỒI VỐN T-hv
+		
+		int NamDuKien = 0;
+		int ThangTrongNamDuKien = 0;
+		double DongTienDuKien = 0.0;
+		double DongTienTheoThang = 0.0;
+		for (int i = 0; i < DoanhThu.length; i++) {
+			DongTienDuKien += DoanhThu[i]-ChiPhi[i];
+			NamDuKien = i+1;
+			
+			if(DongTienDuKien > VDTCoVAT) {
+				DongTienTheoThang = (DoanhThu[i]-ChiPhi[i])/12;
+				
+				DongTienDuKien = DongTienDuKien - ((DoanhThu[i]-ChiPhi[i]));
+				for (int j = 0; j < 12; j++) {
+					DongTienDuKien += DongTienTheoThang;
+					if (DongTienDuKien > VDTCoVAT) {
+						ThangTrongNamDuKien = j+1;
+						break;
+					}
+				}
+				ThoiGianDuKien = (NamDuKien-1) + " năm " + ThangTrongNamDuKien + " tháng";
+				break;
+			}
+		}
 		
 		
 	}
@@ -346,21 +382,34 @@ public class Controller {
 		DoanhThuColumn.setCellValueFactory(new PropertyValueFactory<DoanhThuVaChiPhi, Double>("DoanhThu"));
 		ChiPhiColumn.setCellValueFactory(new PropertyValueFactory<DoanhThuVaChiPhi, Double>("ChiPhi"));
 		table.setItems(DoanhThuVaChiPhiList);
+		
+		IRR = IRR * 100.0;
+		NPVLb.setText(Double.toString(Math.round(NPV*100.0)/100.0));
+		IRRLb.setText(Double.toString(Math.round(IRR*10000.0)/10000.0)+"%");
+		BCRLb.setText(Double.toString(Math.round(BCR*10000.0)/10000.0));
+		ThoiGianDuKienLb.setText(ThoiGianDuKien);
 	}
 
 	public void XuatKetQua(ActionEvent event) throws IOException {
 		FileOutput = FileOutputTF.getText();
 		File f = new File(FileOutput);
 		BufferedWriter bw = new BufferedWriter(new FileWriter(f));
-		
-		bw.write("Năm" + "	" + "Doanh Thu" + "	" + "Chi Phí" + "\n");
-		for (int i = 0; i < DoanhThu.length; i++) {
-			bw.write(i+1 + "	" + Math.round(DoanhThu[i] * 100.0) / 100.0 + "	" 
-						+ Math.round(ChiPhi[i] * 100.0) / 100.0+"\n");
-		}
 
+		bw.write("Năm" + "\t" + "Doanh Thu" + "\t" + "Chi Phí" + "\n");
+		for (int i = 0; i < DoanhThu.length; i++) {
+			bw.write(i + 1 + "\t" + Math.round(DoanhThu[i] * 100.0) / 100.0 + "\t"
+					+ Math.round(ChiPhi[i] * 100.0) / 100.0 + "\n");
+		}
+		bw.write("Đơn vị: triệu đồng\n");
+		bw.write("---------------------------------------\n");
+		bw.write("Chỉ số thu chi quy về thời điểm hiện tại NPV:\t" + Double.toString(Math.round(NPV*100.0)/100.0) +"\ttriệu đồng\n\n");
+		bw.write("Chỉ tiêu mức lãi suất nội tại IRR:\t" + Double.toString(Math.round(IRR*10000.0)/10000.0)+"%\n\n");
+		bw.write("Chỉ tiêu chỉ số lợi ích và chi phí BCR:\t"+ Double.toString(Math.round(BCR*10000.0)/10000.0)+"\n\n");
+		bw.write("Thời gian thu hồi vốn dự kiến:\t"+ThoiGianDuKien+"\n\n");
+		
+		
+		
 		bw.close();
 	}
-	
-	
+
 }

@@ -339,7 +339,7 @@
             <Font size="19.0" />
          </font>
       </Button>
-      <TableView fx:id="table" layoutX="807.0" layoutY="63.0" prefHeight="635.0" prefWidth="207.0">
+      <TableView fx:id="table" layoutX="807.0" layoutY="63.0" prefHeight="266.0" prefWidth="207.0">
         <columns>
           <TableColumn fx:id="NamColumn" prefWidth="35.9998779296875" sortable="false" text="Năm" />
           <TableColumn fx:id="DoanhThuColumn" prefWidth="92.0" text="Doanh Thu " />
@@ -349,7 +349,7 @@
             <SepiaTone level="0.65" />
          </effect>
       </TableView>
-      <Label alignment="CENTER" layoutX="807.0" prefHeight="75.0" prefWidth="210.0" text="TỔNG DOANH THU VÀ CHI PHÍ CÁC NĂM" textAlignment="CENTER" textFill="#0f17f4b0" wrapText="true">
+      <Label alignment="CENTER" layoutX="807.0" prefHeight="75.0" prefWidth="210.0" text="KẾT QUẢ" textAlignment="CENTER" textFill="#0f17f4b0" wrapText="true">
          <font>
             <Font name="System Bold" size="17.0" />
          </font>
@@ -359,7 +359,7 @@
             <Font size="19.0" />
          </font>
       </Button>
-      <Label layoutX="843.0" layoutY="698.0" prefHeight="1.0" prefWidth="136.0" text="Trần Anh Quyền 18THXD" />
+      <Label layoutX="1.0" layoutY="4.0" prefHeight="1.0" prefWidth="136.0" text="Trần Anh Quyền 18THXD" />
       <GridPane layoutX="9.0" layoutY="54.0" prefHeight="218.0" prefWidth="386.0">
         <columnConstraints>
           <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="52.20001220703125" minWidth="10.0" prefWidth="24.000006103515624" />
@@ -610,5 +610,61 @@
             <Font size="19.0" />
          </font>
       </Button>
+      <Label layoutX="809.0" layoutY="330.0" prefHeight="54.0" prefWidth="178.0" text="- Chỉ tiêu số thu chi quy về thời điểm hiện tại:" wrapText="true">
+         <font>
+            <Font name="System Bold Italic" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="832.0" layoutY="398.0" prefHeight="18.0" prefWidth="38.0" text="NPV:" wrapText="true">
+         <font>
+            <Font name="System Bold Italic" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="809.0" layoutY="426.0" prefHeight="54.0" prefWidth="178.0" text="- Chỉ tiêu mức lãi suất nội tại:" wrapText="true">
+         <font>
+            <Font name="System Bold Italic" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="832.0" layoutY="495.0" prefHeight="18.0" prefWidth="38.0" text="IRR:" wrapText="true">
+         <font>
+            <Font name="System Bold Italic" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="IRRLb" alignment="CENTER" contentDisplay="CENTER" layoutX="887.0" layoutY="494.0" prefHeight="26.0" prefWidth="102.0" text="0" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font name="System Italic" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="809.0" layoutY="533.0" prefHeight="54.0" prefWidth="178.0" text="- Chỉ tiêu chỉ số lợi ích và chi phí:" wrapText="true">
+         <font>
+            <Font name="System Bold Italic" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="832.0" layoutY="596.0" prefHeight="18.0" prefWidth="38.0" text="BCR:" wrapText="true">
+         <font>
+            <Font name="System Bold Italic" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="NPVLb" alignment="CENTER" contentDisplay="CENTER" layoutX="887.0" layoutY="397.0" prefHeight="26.0" prefWidth="102.0" text="0" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font name="System Italic" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="BCRLb" alignment="CENTER" contentDisplay="CENTER" layoutX="887.0" layoutY="595.0" prefHeight="26.0" prefWidth="102.0" text="0" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font name="System Italic" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="809.0" layoutY="631.0" prefHeight="54.0" prefWidth="178.0" text="- Thời gian thu hồi vốn dự kiến:" wrapText="true">
+         <font>
+            <Font name="System Bold Italic" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="ThoiGianDuKienLb" alignment="CENTER" contentDisplay="CENTER" layoutX="826.0" layoutY="677.0" prefHeight="26.0" prefWidth="165.0" text="0" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font name="System Italic" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="813.0" layoutY="46.0" text="Đơn vị: triệu đồng" />
    </children>
 </AnchorPane>
